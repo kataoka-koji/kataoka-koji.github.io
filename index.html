@@ -23,24 +23,22 @@
             line-height: 1.8;
             margin: 0;
             padding: 0;
-            overflow-x: hidden; /* 横揺れ防止 */
+            overflow-x: hidden;
         }
 
-        /* ふわっと浮かび上がる魔法（初期状態は透明で少し下にいる） */
         .fade-in {
             opacity: 0;
             transform: translateY(40px);
             transition: opacity 1s cubic-bezier(0.25, 1, 0.5, 1), transform 1s cubic-bezier(0.25, 1, 0.5, 1);
         }
 
-        /* スクロールして画面に入ったら発動する魔法 */
         .fade-in.is-visible {
             opacity: 1;
             transform: translateY(0);
         }
 
         header {
-            background: linear-gradient(135deg, #2c7a51, #1e5c3a); /* ちょっとおしゃれなグラデーション */
+            background: linear-gradient(135deg, #2c7a51, #1e5c3a);
             color: white;
             text-align: center;
             padding: 100px 20px;
@@ -51,7 +49,7 @@
             margin: 0;
             font-size: 36px;
             letter-spacing: 4px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.2); /* 文字にもうっすら影 */
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
         }
 
         .subtitle {
@@ -64,7 +62,7 @@
 
         .container {
             max-width: 1000px;
-            margin: -30px auto 0; /* ヘッダーに少し食い込ませる今どきのテクニック */
+            margin: -30px auto 0;
             padding: 0 20px 50px;
             position: relative;
             z-index: 10;
@@ -96,7 +94,6 @@
             background-color: var(--card-bg);
             padding: 50px;
             border-radius: 16px;
-            /* デザイナーっぽいうっとりするような柔らかい影 */
             box-shadow: 0 10px 40px rgba(0,0,0,0.08); 
             margin-bottom: 80px;
             border-left: 8px solid var(--main-color);
@@ -111,7 +108,7 @@
             font-weight: bold;
             color: var(--main-color);
             font-size: 1.15em;
-            background: linear-gradient(transparent 70%, #d4edda 70%); /* 蛍光ペンみたいなマーカー線 */
+            background: linear-gradient(transparent 70%, #d4edda 70%);
             display: inline;
         }
 
@@ -120,21 +117,24 @@
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 40px;
             margin-bottom: 80px;
+            align-items: stretch; /* カードの高さをすべて揃える魔法 */
         }
 
         .work-card {
             background-color: var(--card-bg);
             border-radius: 16px;
             overflow: hidden;
-            /* 通常時の少し浮いた影 */
             box-shadow: 0 8px 30px rgba(0,0,0,0.06);
-            transition: all 0.4s ease; /* 動きをなめらかに */
+            transition: all 0.4s ease;
+            /* Flexboxを使って中身を整理する魔法 */
+            display: flex;
+            flex-direction: column;
+            height: 100%;
         }
 
-        /* マウスを乗せた時のおしゃれな動き！ */
         .work-card:hover {
-            transform: translateY(-12px); /* グッと持ち上がる */
-            box-shadow: 0 20px 40px rgba(0,0,0,0.12); /* 影が濃く、広くなる */
+            transform: translateY(-12px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.12);
         }
 
         .work-image {
@@ -145,17 +145,20 @@
             transition: transform 0.5s ease;
         }
 
-        /* 画像もマウスでちょっとズームする小技 */
         .work-card:hover .work-image {
             transform: scale(1.05);
         }
 
         .work-image-wrapper {
-            overflow: hidden; /* ズームしてもはみ出さないように */
+            overflow: hidden;
         }
 
         .work-content {
             padding: 30px;
+            /* 中身もFlexboxにして、タグを一番下に押しやる */
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
         }
 
         .work-title {
@@ -170,6 +173,7 @@
             font-size: 14.5px;
             color: var(--light-text);
             margin: 0 0 20px 0;
+            flex-grow: 1; /* 文章のエリアを伸び縮みさせて余白を埋める */
         }
 
         .work-meta {
@@ -179,7 +183,9 @@
             display: inline-block;
             padding: 6px 12px;
             background-color: #e8f5e9;
-            border-radius: 20px; /* 丸みのあるタグ風に */
+            border-radius: 20px;
+            align-self: flex-start; /* タグが横にビローンと伸びないようにする */
+            margin-top: auto; /* 絶対に一番下に配置する念押し */
         }
 
         .qualification-box {
@@ -201,7 +207,7 @@
         }
 
         .qualification-img:hover {
-            transform: scale(1.02); /* 資格画像もほんのりズーム */
+            transform: scale(1.02);
         }
 
         footer {
@@ -224,7 +230,7 @@
     <div class="container">
         
         <section class="philosophy-box fade-in">
-            <h2 class="section-title" style="text-align: left; margin-bottom: 25px;">My Philosophy & Story</h2>
+            <h2 class="section-title" style="margin-bottom: 25px;">My Philosophy & Story</h2>
             <p>2016年、会社員をしながら立ち上げた映画レビューサイトから、私のWebクリエイターとしての歩みは始まりました。<br>
             独学でHTML・CSS・PHPを学び、サイトを育て、売却を経験。「株式会社ぴよたんの癒しの森」の立ち上げを経て、現在は介護事業に携わりながらサイト運営やアプリ開発に力を入れています。</p>
             <p>長くWebの世界を見てきましたが、利益を優先するあまり、読者の目を誤魔化すようなグレーな手法も確かに存在します。しかし、一人のクリエイターとして、私はそういった手法を絶対に選びません。</p>
@@ -241,7 +247,7 @@
             <p style="font-weight: bold; font-size: 1.1em; color: var(--main-color); margin: 20px 0;">
                 認知症ケア / 介護系資格 / メンタル心理カウンセラー / マイクロソフト認定資格
             </p>
-            <p style="font-size: 14px; color: var(--light-text);">YMYL領域での執筆・サイト運営において、情報の信頼性を証明するために以下の資格を取得・活用しています。</p>
+            <p style="font-size: 14px; color: var(--light-text); font-weight: bold;">※YMYLは資格証明が必須です。医療・福祉関係の資格は、読者へ安全で正確な情報を届けるための強力な基盤となっています。</p>
             
             <img src="sikaku.jpg" alt="保有資格の証明" class="qualification-img">
         </section>
@@ -356,7 +362,7 @@
                     }
                 });
             }, {
-                threshold: 0.1 // 10%見えたら魔法を発動する
+                threshold: 0.1
             });
 
             fadeElements.forEach(element => {
