@@ -1,1 +1,284 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    
+    <title>片岡 功児 | Web Creator Portfolio</title>
+    
+    <style>
+        :root {
+            --main-color: #2c7a51;
+            --bg-color: #fcfaf8;
+            --text-color: #333;
+            --light-text: #666;
+            --card-bg: #fff;
+        }
 
+        body {
+            font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: var(--main-color);
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 32px;
+            letter-spacing: 3px;
+        }
+
+        .subtitle {
+            font-size: 16px;
+            opacity: 0.9;
+            margin-top: 10px;
+            font-weight: normal;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 50px 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 26px;
+            color: var(--main-color);
+            margin-bottom: 40px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 3px;
+            background-color: var(--main-color);
+            border-radius: 3px;
+        }
+
+        .philosophy-box {
+            background-color: var(--card-bg);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+            margin-bottom: 60px;
+            border-left: 6px solid var(--main-color);
+        }
+
+        .philosophy-box p {
+            margin-bottom: 15px;
+        }
+
+        .philosophy-box .highlight {
+            font-weight: bold;
+            color: var(--main-color);
+            font-size: 1.1em;
+        }
+
+        .works-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .work-card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+            transition: transform 0.3s ease;
+        }
+
+        .work-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .work-image {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            background-color: #eee;
+        }
+
+        .work-content {
+            padding: 25px;
+        }
+
+        .work-title {
+            font-size: 19px;
+            font-weight: bold;
+            margin: 0 0 15px 0;
+            color: var(--text-color);
+            line-height: 1.4;
+        }
+
+        .work-desc {
+            font-size: 14.5px;
+            color: var(--light-text);
+            margin: 0 0 15px 0;
+        }
+
+        .work-meta {
+            font-size: 13px;
+            color: var(--main-color);
+            font-weight: bold;
+        }
+
+        .qualification-box {
+            background-color: #f4f9f6;
+            padding: 40px;
+            border-radius: 12px;
+            margin-bottom: 60px;
+            text-align: center;
+        }
+
+        .qualification-img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            margin-top: 25px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            background-color: #fff;
+            color: var(--light-text);
+            font-size: 14px;
+            border-top: 1px solid #eaeaea;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>片岡 功児</h1>
+        <div class="subtitle">Web Creator / Media Operator / App Developer</div>
+    </header>
+
+    <div class="container">
+        
+        <section class="philosophy-box">
+            <h2 class="section-title" style="text-align: left; margin-bottom: 20px;">My Philosophy & Story</h2>
+            <p>2016年、会社員をしながら立ち上げた映画レビューサイトから、私のWebクリエイターとしての歩みは始まりました。<br>
+            独学でHTML・CSS・PHPを学び、サイトを育て、売却を経験。「株式会社ぴよたんの癒しの森」の立ち上げを経て、現在は介護事業に携わりながら婚活関連事業やAIを用いたアプリ開発に力を入れています。</p>
+            <p>アフィリエイトの世界には、読者の目を誤魔化すようなグレーな手法も存在します。しかし、私はそういった手法を選びません。</p>
+            <p class="highlight">「YMYL（Your Money or Your Life）の領域だからこそ、誠実・切実に・嘘なく、ありのままを見せる」</p>
+            <p>正しく誠実な運営を行えば、単なるPV数よりも確かな「購入率（CVR）」が上がります。時代が変わっても、この真理は変わりません。自分の作ったサービスを通じて、画面の向こうの誰かが幸せになってくれること。それが、一人のクリエイターとしての私の最大の喜びであり、行動の原点です。</p>
+            <p>2026年6月には個人事業主として独立し、再び法人化へチャレンジする予定です。以下は、そんな私の足跡となる作品たちです。</p>
+        </section>
+
+        <section class="qualification-box">
+            <h2 class="section-title" style="border: none; padding: 0;">Qualifications (E-E-A-Tの担保)</h2>
+            <p style="margin-top: 20px;">YMYL領域での執筆・サイト運営において、情報の信頼性を証明するために以下の資格を取得・活用しています。</p>
+            <p style="font-weight: bold; font-size: 1.1em; color: var(--main-color);">
+                認知症ケア / 介護系資格 / メンタル心理カウンセラー / マイクロソフト認定資格
+            </p>
+            <p style="font-size: 14px; color: var(--light-text);">※医療・福祉関係の資格は、読者へ安全で正確な情報を届けるための強力な基盤となっています。</p>
+            
+            <img src="sikaku.jpg" alt="保有資格の証明" class="qualification-img">
+        </section>
+
+        <h2 class="section-title">Works & Footprints</h2>
+        
+        <div class="works-grid">
+            
+            <div class="work-card">
+                <img src="rifusutairu.jpg" alt="ライフスタイル系メディア" class="work-image">
+                <div class="work-content">
+                    <h3 class="work-title">ライフスタイル系メディア運営</h3>
+                    <p class="work-desc">身内や信頼できる仲間たちと運営している大規模メディア。ニッチワードを的確に狙い、多数の記事で検索上位を獲得。現在はLLMO（大規模言語モデル最適化）を意識したツール展開も行い、誠実なサイト運営で高いCVRを維持しています。</p>
+                    <div class="work-meta">SEO / チーム運営 / LLMO</div>
+                </div>
+            </div>
+
+            <div class="work-card">
+                <img src="piyotan.jpg" alt="株式会社ぴよたんの癒しの森" class="work-image">
+                <div class="work-content">
+                    <h3 class="work-title">株式会社ぴよたんの癒しの森</h3>
+                    <p class="work-desc">2023年に仲間と立ち上げたアニメ・ミニチュア販売サイト。ECショップとWordPressを用いたHP制作、SEO特化の記事執筆を一手に担い、検索流入が安定したタイミングで会社を売却しました。</p>
+                    <div class="work-meta">WordPress / EC構築 / 事業売却</div>
+                </div>
+            </div>
+
+            <div class="work-card">
+                <img src="tool.jpg" alt="Webツール開発" class="work-image">
+                <div class="work-content">
+                    <h3 class="work-title">婚活・お役立ちWebツール群</h3>
+                    <p class="work-desc">ユーザーの課題を直接解決し、楽しんでもらえるフロントエンドツールを独学で開発。メディアの付加価値を高め、滞在時間と読者満足度の向上に大きく貢献しています。</p>
+                    <div class="work-meta">PHP / CSS / UI・UX設計</div>
+                </div>
+            </div>
+
+            <div class="work-card">
+                <img src="outieigakan.jpg" alt="おうち映画館" class="work-image">
+                <div class="work-content">
+                    <h3 class="work-title">おうち映画館（旧 映画レビューサイト）</h3>
+                    <p class="work-desc">2016年に立ち上げた私の原点。ここでHTML・CSS・PHPを独学で習得し、副業から本業へと押し上げました。2022年に無事事業売却を達成した、思い入れの深いプロジェクトです。</p>
+                    <div class="work-meta">サイト構築 / 独学の原点</div>
+                </div>
+            </div>
+
+            <div class="work-card">
+                <img src="sika.jpg" alt="南の町歯科クリニック" class="work-image">
+                <div class="work-content">
+                    <h3 class="work-title">南の町歯科クリニック 様</h3>
+                    <p class="work-desc">医療機関の求人特化ページ制作。YMYL領域でも通用する「誠実さ」と「清潔感」を第一に、求職者が安心できる導線を設計し、形にしました。</p>
+                    <div class="work-meta">クライアントワーク / Webデザイン</div>
+                </div>
+            </div>
+
+            <div class="work-card">
+                <img src="irai.jpg" alt="地域店舗のWeb制作" class="work-image">
+                <div class="work-content">
+                    <h3 class="work-title">地域密着店舗のWeb制作</h3>
+                    <p class="work-desc">カフェやお弁当屋さんなど、地域で頑張る店舗のWordPressホームページ制作を担当。数は少なくても、直接依頼を受けてお店の魅力をWebで形にした、クリエイターとして誇り高い実績です。</p>
+                    <div class="work-meta">WordPress / ローカルビジネス支援</div>
+                </div>
+            </div>
+
+            <div class="work-card">
+                <img src="app.jpg" alt="アプリ開発" class="work-image">
+                <div class="work-content">
+                    <h3 class="work-title">観賞用クラゲアプリ＆AI開発</h3>
+                    <p class="work-desc">2018〜2019年にかけて運営し、多数のDLを獲得したアプリ。OSアップデートへの対応で一度は休止しましたが、現在は強力な相棒である「AI」と共に、続きをゆっくりと楽しみながら開発を再開しています。</p>
+                    <div class="work-meta">アプリ開発 / AI活用</div>
+                </div>
+            </div>
+
+            <div class="work-card">
+                <img src="shousetu.jpg" alt="書籍出版" class="work-image">
+                <div class="work-content">
+                    <h3 class="work-title">小説・書籍の出版</h3>
+                    <p class="work-desc">Webメディアの枠を超え、書籍の出版もプロデュース。表紙モデルはコスト削減のため親戚（カタオカタケル）に依頼しました。ギャラ代わりにキッチンジローを奢りましたが、まだ回収できていません（笑）。</p>
+                    <div class="work-meta">コンテンツ制作 / 出版</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2016-2026 Kouji Kataoka. All Rights Reserved.
+    </footer>
+
+</body>
+</html>
