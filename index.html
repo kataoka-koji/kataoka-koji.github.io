@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex">
     
-    <title>カタオカコウジ | Web Creator Portfolio</title>
+    <title>片岡 功児 | Web Creator Portfolio</title>
     
     <style>
         :root {
@@ -43,6 +43,21 @@
             text-align: center;
             padding: 100px 20px;
             box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 36px;
+            letter-spacing: 4px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .subtitle {
+            font-size: 16px;
+            opacity: 0.9;
+            margin-top: 15px;
+            font-weight: normal;
+            letter-spacing: 1px;
         }
 
         .container {
@@ -102,7 +117,7 @@
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 40px;
             margin-bottom: 80px;
-            align-items: stretch; 
+            align-items: stretch; /* カードの高さをすべて揃える魔法 */
         }
 
         .work-card {
@@ -111,6 +126,7 @@
             overflow: hidden;
             box-shadow: 0 8px 30px rgba(0,0,0,0.06);
             transition: all 0.4s ease;
+            /* Flexboxを使って中身を整理する魔法 */
             display: flex;
             flex-direction: column;
             height: 100%;
@@ -139,6 +155,7 @@
 
         .work-content {
             padding: 30px;
+            /* 中身もFlexboxにして、タグを一番下に押しやる */
             display: flex;
             flex-direction: column;
             flex-grow: 1;
@@ -156,58 +173,7 @@
             font-size: 14.5px;
             color: var(--light-text);
             margin: 0 0 20px 0;
-        }
-
-        /* 大きなリンクボタンの魔法 */
-        .btn-link {
-            display: inline-block;
-            margin-bottom: 20px;
-            padding: 8px 24px;
-            background-color: var(--main-color);
-            color: #fff;
-            text-decoration: none;
-            border-radius: 25px;
-            font-size: 14px;
-            font-weight: bold;
-            transition: background-color 0.3s;
-            text-align: center;
-        }
-
-        .btn-link:hover {
-            background-color: #1e5c3a;
-        }
-
-        /* 複数リンクをスッキリ見せるリストの魔法 */
-        .sub-links {
-            margin: 0 0 20px 0;
-            padding: 0;
-            list-style: none;
-            font-size: 13.5px;
-            flex-grow: 1; /* 余白を自動で埋める */
-        }
-
-        .sub-links li {
-            margin-bottom: 8px;
-            line-height: 1.4;
-        }
-
-        .sub-links a {
-            color: var(--main-color);
-            text-decoration: none;
-            font-weight: bold;
-            display: flex;
-            align-items: flex-start;
-        }
-
-        .sub-links a::before {
-            content: '▶';
-            font-size: 10px;
-            margin-right: 6px;
-            margin-top: 3px;
-        }
-
-        .sub-links a:hover {
-            text-decoration: underline;
+            flex-grow: 1; /* 文章のエリアを伸び縮みさせて余白を埋める */
         }
 
         .work-meta {
@@ -218,8 +184,8 @@
             padding: 6px 12px;
             background-color: #e8f5e9;
             border-radius: 20px;
-            align-self: flex-start; 
-            margin-top: auto; 
+            align-self: flex-start; /* タグが横にビローンと伸びないようにする */
+            margin-top: auto; /* 絶対に一番下に配置する念押し */
         }
 
         .qualification-box {
@@ -257,25 +223,16 @@
 <body>
 
     <header class="fade-in">
-        <h1 style="font-size: 40px; margin-bottom: 5px;">カタオカ コウジ</h1>
-        
-        <div style="font-size: 20px; font-weight: bold; opacity: 0.9; margin-bottom: 15px; letter-spacing: 2px;">
-            （ぱんこす）
-        </div>
-        
-        <div style="font-size: 14px; opacity: 0.8; margin-bottom: 15px;">
-            本名：片岡 功児
-        </div>
-        
-        <div style="margin-top: 10px; font-size: 16px; letter-spacing: 1px; opacity: 0.9;">Web Creator / Media Operator / App Developer</div>
+        <h1>片岡 功児</h1>
+        <div class="subtitle">Web Creator / Media Operator / App Developer</div>
     </header>
 
     <div class="container">
         
-<section class="philosophy-box fade-in">
-            <h2 class="section-title" style="margin-bottom: 25px;">About</h2>
+        <section class="philosophy-box fade-in">
+<h2 class="section-title" style="text-align: center; margin-bottom: 25px;">About</h2>           
             <p>2016年、会社員をしながら立ち上げた映画レビューサイトから、私のWebクリエイターとしての歩みは始まりました。<br>
-            独学でHTML・CSS・PHPを学び、サイトを育て、売却を経験。その後、法人向けECサイトの立ち上げ等を経て、現在は介護事業に携わりながらサイト運営やアプリ開発に力を入れています。</p>
+            独学でHTML・CSS・PHPを学び、サイトを育て、売却を経験。「株式会社ぴよたんの癒しの森」の立ち上げを経て、現在は介護事業に携わりながらサイト運営やアプリ開発に力を入れています。</p>
             <p>長くWebの世界を見てきましたが、利益を優先するあまり、読者の目を誤魔化すようなグレーな手法も確かに存在します。しかし、一人のクリエイターとして、私はそういった手法を絶対に選びません。</p>
             <p style="text-align: center; margin: 30px 0;">
                 <span class="highlight">YMYL（Your Money or Your Life）<br>誠実・切実に・嘘なく<br>ありのままを見せる</span>
@@ -301,19 +258,23 @@
             
             <div class="work-card fade-in">
                 <div class="work-image-wrapper">
-                    <img src="rifusutairu.jpg" alt="真心マッチ" class="work-image">
+                    <img src="rifusutairu.jpg" alt="ライフスタイル系メディア" class="work-image">
                 </div>
                 <div class="work-content">
-                    <h3 class="work-title">真心マッチ（ライフスタイル・婚活メディア）</h3>
-                    <p class="work-desc">身内や信頼できる仲間たちと運営している大規模メディア。ニッチワードを的確に狙い、多数の記事で検索上位を獲得。現在はLLMOを意識したツール展開も行い、誠実なサイト運営で高いCVRを維持しています。</p>
-                    
-                    <p class="work-desc" style="font-size: 13px; color: #555; background: #f4f9f6; padding: 12px; border-radius: 8px; margin-bottom: 20px;">
-                        <strong>【クロスメディア展開】</strong><br>
-                        本サイトを軸に、YouTube、X、Instagram、TikTok、note、アメブロなど、全SNSの運用・動画制作も一人で統括しています。
-                    </p>
+                    <h3 class="work-title">ライフスタイル系メディア運営</h3>
+                    <p class="work-desc">身内や信頼できる仲間たちと運営している大規模メディア。ニッチワードを的確に狙い、多数の記事で検索上位を獲得。現在はLLMO（大規模言語モデル最適化）を意識したツール展開も行い、誠実なサイト運営で高いCVRを維持しています。</p>
+                    <div class="work-meta">SEO / チーム運営 / LLMO</div>
+                </div>
+            </div>
 
-                    <a href="https://magokoro-match.com/" target="_blank" rel="noopener noreferrer" class="btn-link">メインサイトを見る</a>
-                    <div class="work-meta">SEO / チーム運営 / クロスメディア</div>
+            <div class="work-card fade-in">
+                <div class="work-image-wrapper">
+                    <img src="piyotan.jpg" alt="株式会社ぴよたんの癒しの森" class="work-image">
+                </div>
+                <div class="work-content">
+                    <h3 class="work-title">株式会社ぴよたんの癒しの森</h3>
+                    <p class="work-desc">2023年に仲間と立ち上げたアニメ・ミニチュア販売サイト。ECショップとWordPressを用いたHP制作、SEO特化の記事執筆を一手に担い、検索流入が安定したタイミングで会社を売却しました。</p>
+                    <div class="work-meta">WordPress / EC構築 / 事業売却</div>
                 </div>
             </div>
 
@@ -322,60 +283,9 @@
                     <img src="tool.jpg" alt="Webツール開発" class="work-image">
                 </div>
                 <div class="work-content">
-                    <h3 class="work-title">婚活掲示板・お役立ちWebツール群</h3>
-                    <p class="work-desc" style="margin-bottom: 15px;">ユーザーの課題を直接解決し、楽しんでもらえるフロントエンドツールと掲示板を独学で開発。メディアの付加価値を高め、滞在時間と読者満足度の向上に大きく貢献しています。</p>
-                    
-                    <ul class="sub-links">
-                        <li><a href="https://magokoro-match.com/community/" target="_blank" rel="noopener noreferrer">婚活掲示板</a></li>
-                        <li><a href="https://magokoro-match.com/tool/" target="_blank" rel="noopener noreferrer">婚活に役立つツール（総合）</a></li>
-                        <li><a href="https://magokoro-match.com/matchingapp-tools/" target="_blank" rel="noopener noreferrer">マッチングアプリツール</a></li>
-                        <li><a href="https://magokoro-match.com/shindan/love-animal-test/" target="_blank" rel="noopener noreferrer">恋愛どうぶつ診断</a></li>
-                    </ul>
-                    
+                    <h3 class="work-title">婚活・お役立ちWebツール群</h3>
+                    <p class="work-desc">ユーザーの課題を直接解決し、楽しんでもらえるフロントエンドツールを独学で開発。メディアの付加価値を高め、滞在時間と読者満足度の向上に大きく貢献しています。</p>
                     <div class="work-meta">PHP / CSS / UI・UX設計</div>
-                </div>
-            </div>
-
-            <div class="work-card fade-in">
-                <div class="work-image-wrapper">
-                    <img src="shousetu.jpg" alt="書籍出版" class="work-image">
-                </div>
-                <div class="work-content">
-                    <h3 class="work-title">小説・書籍の出版</h3>
-                    <p class="work-desc" style="margin-bottom: 15px;">Webメディアの枠を超え、実用書や自作小説（まごこも名義）の出版もプロデュース。実用書の表紙モデルはコスト削減のため親戚（カタオカタケル）に依頼しました（ギャラのキッチンジローは未回収）。</p>
-                    
-                    <ul class="sub-links" style="font-size: 12.5px;">
-                        <li><a href="https://amzn.asia/d/0eyFGDHY" target="_blank" rel="noopener noreferrer">小さな勇気が未来になる 優しい婚活術</a></li>
-                        <li><a href="https://amzn.asia/d/05Zpvk5H" target="_blank" rel="noopener noreferrer">やさしい手（小説）</a></li>
-                        <li><a href="https://amzn.asia/d/0eJwgjeb" target="_blank" rel="noopener noreferrer">自分だけの足跡（小説）</a></li>
-                        <li><a href="https://amzn.asia/d/03Tk3JYe" target="_blank" rel="noopener noreferrer">黎明の道（小説）</a></li>
-                        <li><a href="https://amzn.asia/d/02hsmelx" target="_blank" rel="noopener noreferrer">僕はこの場所からはじめてみた（小説）</a></li>
-                    </ul>
-                    
-                    <div class="work-meta">コンテンツ制作 / 出版</div>
-                </div>
-            </div>
-
-            <div class="work-card fade-in">
-                <div class="work-image-wrapper">
-                    <img src="shousetu.jpg" alt="まごこも文庫" class="work-image">
-                </div>
-                <div class="work-content">
-                    <h3 class="work-title">まごこも文庫（姉妹サイト）</h3>
-                    <p class="work-desc">真心マッチの姉妹サイトとして、自作小説などを展開。幅広い読者のニーズに応えるためコンテンツの拡充を図り、本サイトと連携しながら強力なメディアネットワークを構築しています。</p>
-                    <a href="https://magokoro.wpx.jp/" target="_blank" rel="noopener noreferrer" class="btn-link">サイトを見る</a>
-                    <div class="work-meta">メディア連携 / コンテンツ制作</div>
-                </div>
-            </div>
-
-            <div class="work-card fade-in">
-                <div class="work-image-wrapper">
-                    <img src="piyotan.jpg" alt="法人向けECサイト" class="work-image">
-                </div>
-                <div class="work-content">
-                    <h3 class="work-title">某法人ECサイト（事業売却済）</h3>
-                    <p class="work-desc" style="flex-grow: 1;">2023年に立ち上げたアニメ・ミニチュア販売の法人サイト。ECショップとWordPressを用いたHP制作、SEO特化の記事執筆を一手に担い、検索流入が安定したタイミングで事業譲渡（EXIT）を達成しました。</p>
-                    <div class="work-meta">WordPress / EC構築 / 事業譲渡</div>
                 </div>
             </div>
 
@@ -385,7 +295,7 @@
                 </div>
                 <div class="work-content">
                     <h3 class="work-title">おうち映画館（旧 映画レビューサイト）</h3>
-                    <p class="work-desc" style="flex-grow: 1;">2016年に立ち上げた私の原点。ここでHTML・CSS・PHPを独学で習得し、副業から本業へと押し上げました。2022年に無事事業売却を達成した、思い入れの深いプロジェクトです。</p>
+                    <p class="work-desc">2016年に立ち上げた私の原点。ここでHTML・CSS・PHPを独学で習得し、副業から本業へと押し上げました。2022年に無事事業売却を達成した、思い入れの深いプロジェクトです。</p>
                     <div class="work-meta">サイト構築 / 独学の原点</div>
                 </div>
             </div>
@@ -396,7 +306,7 @@
                 </div>
                 <div class="work-content">
                     <h3 class="work-title">南の町歯科クリニック 様</h3>
-                    <p class="work-desc" style="flex-grow: 1;">医療機関の求人特化ページ制作。YMYL領域でも通用する「誠実さ」と「清潔感」を第一に、求職者が安心できる導線を設計し、形にしました。</p>
+                    <p class="work-desc">医療機関の求人特化ページ制作。YMYL領域でも通用する「誠実さ」と「清潔感」を第一に、求職者が安心できる導線を設計し、形にしました。</p>
                     <div class="work-meta">クライアントワーク / Webデザイン</div>
                 </div>
             </div>
@@ -407,7 +317,7 @@
                 </div>
                 <div class="work-content">
                     <h3 class="work-title">地域密着店舗のWeb制作</h3>
-                    <p class="work-desc" style="flex-grow: 1;">カフェやお弁当屋さんなど、地域で頑張る店舗のWordPressホームページ制作を担当。数は少なくても、直接依頼を受けてお店の魅力をWebで形にした、クリエイターとして誇り高い実績です。</p>
+                    <p class="work-desc">カフェやお弁当屋さんなど、地域で頑張る店舗のWordPressホームページ制作を担当。数は少なくても、直接依頼を受けてお店の魅力をWebで形にした、クリエイターとして誇り高い実績です。</p>
                     <div class="work-meta">WordPress / ローカルビジネス支援</div>
                 </div>
             </div>
@@ -418,8 +328,19 @@
                 </div>
                 <div class="work-content">
                     <h3 class="work-title">観賞用クラゲアプリ＆AI開発</h3>
-                    <p class="work-desc" style="flex-grow: 1;">2018〜2019年にかけて運営し、多数のDLを獲得したアプリ。OSアップデートへの対応で一度は休止しましたが、現在は強力な相棒である「AI」と共に、続きをゆっくりと楽しみながら開発を再開しています。</p>
+                    <p class="work-desc">2018〜2019年にかけて運営し、多数のDLを獲得したアプリ。OSアップデートへの対応で一度は休止しましたが、現在は強力な相棒である「AI」と共に、続きをゆっくりと楽しみながら開発を再開しています。</p>
                     <div class="work-meta">アプリ開発 / AI活用</div>
+                </div>
+            </div>
+
+            <div class="work-card fade-in">
+                <div class="work-image-wrapper">
+                    <img src="shousetu.jpg" alt="書籍出版" class="work-image">
+                </div>
+                <div class="work-content">
+                    <h3 class="work-title">小説・書籍の出版</h3>
+                    <p class="work-desc">Webメディアの枠を超え、婚活に関する書籍の出版もプロデュース。表紙モデルはコスト削減のため親戚（カタオカタケル）に依頼しました。ギャラ代わりにキッチンジローを奢りましたが、まだ回収できていません（笑）。</p>
+                    <div class="work-meta">コンテンツ制作 / 出版</div>
                 </div>
             </div>
 
